@@ -1,0 +1,395 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: "Montserrat", sans-serif;
+   background-color: #f5f5f5;
+}
+
+header {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 100%;
+   height: 90vh;
+   margin: 0;
+   padding: 20px 0;
+   position: relative;
+   background-attachment: fixed;
+   background-image: url(../img/capa-madmax2.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+header .header-gradiente {
+   background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 212, 255, 0) 75%
+   );
+   width: 100%;
+   height: calc(100% - 20px);
+   position: absolute;
+   z-index: 3;
+}
+
+header .header-menu {
+   color: #fff;
+   font-size: 13px;
+   font-weight: bold;
+   z-index: 4;
+}
+
+.container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 960px;
+   margin: 0 auto;
+}
+
+header .header-menu .container .header-logo {
+   flex: 2;
+   display: flex;
+}
+
+header .header-menu .container .header-lista {
+   display: flex;
+}
+
+header .header-menu .container .header-usuario-foto {
+   flex: 1;
+   display: flex;
+   justify-content: flex-end;
+}
+
+header .header-conteudo {
+   color: #fff;
+   margin: 0;
+   z-index: 5;
+   margin-bottom: 25px;
+}
+
+header .header-menu .container .header-lista ul {
+   display: flex;
+   flex-direction: row;
+   list-style: none;
+   text-transform: uppercase;
+}
+
+header .header-menu .container .header-lista ul li a {
+   margin-left: 25px;
+   margin-right: 25px;
+   color: #fff;
+   text-decoration: none;
+   transition: color 0.2s;
+}
+
+header .header-menu .container .header-lista ul li a:hover {
+   color: #e4bb23;
+   cursor: pointer;
+}
+
+header .header-menu .container .header-usuario-foto img {
+   width: 15%;
+   border-radius: 100%;
+}
+
+header .header-menu .container .header-usuario-foto p {
+   margin-left: 12px;
+}
+
+header .header-conteudo .container {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: space-between;
+   font-weight: 100;
+}
+
+header .header-conteudo .container h1 {
+   margin: 0;
+   font-size: 65px;
+   font-weight: bold;
+   text-transform: uppercase;
+   line-height: 1.2em;
+}
+
+header .header-conteudo .container .genero {
+   margin-top: 15px;
+   margin-bottom: 30px;
+}
+
+header .header-conteudo .container .genero a {
+   color: #fff;
+   font-size: 13px;
+   text-decoration: none;
+   text-transform: uppercase;
+   margin-right: 10px;
+}
+
+header .header-conteudo .container .botao-assistir-trailer {
+   color: #000;
+   padding: 12px 22px;
+   font-size: 14px;
+   margin-bottom: 15px;
+   border-radius: 40px;
+   text-decoration: none;
+   background-color: #e4bb23;
+}
+
+header .header-conteudo .container .botao-assistir-trailer i {
+   margin-left: 10px;
+   font-size: 24px;
+}
+
+header .header-conteudo .container .header-informacao p {
+   font-size: 14px;
+   z-index: 0;
+}
+
+header .header-conteudo .container .header-informacao p:nth-child(2n) {
+   color: #e4bb23;
+   font-size: 14px;
+}
+
+header .header-conteudo .container .botao-assistir-trailer span {
+   margin-left: 25px;
+}
+
+section.catalogo ul.catalogo-menu-lista {
+   width: 960px;
+   height: 50px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   color: #e4bb23;
+   list-style: none;
+   text-transform: uppercase;
+   border-bottom: 1px solid #ddd;
+}
+
+section.catalogo ul.catalogo-menu-lista li.catalogo-menu-lista-item {
+   font-size: 14px;
+   font-weight: bold;
+   margin-top: 25px;
+   margin-right: 36px;
+   cursor: pointer;
+   transition: border 0.2s;
+}
+
+section.catalogo ul.catalogo-menu-lista li.catalogo-menu-lista-item:hover {
+   border-bottom: 2px solid #e4bb23;
+}
+
+section.catalogo ul.catalogo-filmes-lista {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+section.catalogo
+   .container
+   ul.catalogo-filmes-lista
+   li.catalogo-filmes-lista-item {
+   flex-direction: column;
+   margin-bottom: 30px;
+   width: 24%;
+   margin: 14px 4px;
+   padding: 0;
+   text-align: center;
+   background-color: #fff;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   border-radius: 8px;
+   overflow: hidden;
+}
+
+/* QUADRO COM A FIGURA DO FILME */
+section.catalogo
+   .container
+   ul.catalogo-filmes-lista
+   li.catalogo-filmes-lista-item
+   figure.filme-poster {
+   margin: 0;
+   padding: 0;
+   position: relative;
+   overflow: hidden;
+   transition: filter 0.2s;
+}
+
+/* QUADRO TRANSPARENTE POR CIMA */
+section.catalogo
+   .container
+   ul.catalogo-filmes-lista
+   li.catalogo-filmes-lista-item
+   .filme-poster-info {
+   display: none;
+   position: absolute;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   cursor: pointer;
+}
+
+section.catalogo
+   .container
+   ul.catalogo-filmes-lista
+   li.catalogo-filmes-lista-item
+   .filme-poster-info
+   h3 {
+   color: #e4bb23;
+   text-transform: uppercase;
+}
+
+section.catalogo
+   .container
+   ul.catalogo-filmes-lista
+   li.catalogo-filmes-lista-item
+   .filme-poster-info
+   i {
+   color: #fff;
+   font-size: 60px;
+}
+
+/* FAZ APARECER O DIV NA FRENTE */
+section.catalogo
+   .container
+   ul.catalogo-filmes-lista
+   li.catalogo-filmes-lista-item:hover
+   .filme-poster-info {
+   display: flex;
+}
+
+/* ESCURECE O DIV DE TRAS */
+.filme-poster:hover {
+   filter: brightness(0.5);
+}
+
+section.catalogo
+   .container
+   ul.catalogo-filmes-lista
+   li.catalogo-filmes-lista-item
+   figure.filme-poster
+   img {
+   width: 100%;
+   height: auto;
+   margin: 0;
+   padding: 0;
+}
+
+section.catalogo
+   .container
+   ul.catalogo-filmes-lista
+   li.catalogo-filmes-lista-item
+   .filme-sinopse
+   .filme-sinopse-titulo {
+   color: #000;
+   margin-top: 5px;
+   margin-left: 8px;
+   padding: 0;
+   font-size: 13px;
+   font-weight: 700;
+   text-align: left;
+   text-transform: uppercase;
+}
+
+section.catalogo
+   .container
+   ul.catalogo-filmes-lista
+   li.catalogo-filmes-lista-item
+   .filme-sinopse {
+   text-align: left;
+}
+
+section.catalogo
+   .container
+   ul.catalogo-filmes-lista
+   li.catalogo-filmes-lista-item
+   .filme-sinopse
+   a.sinopse-genero-item {
+   color: #e4bb23;
+   margin-top: 5px;
+   margin-left: 8px;
+   padding: 0;
+   font-size: 12px;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+section.catalogo
+   .container
+   ul.catalogo-filmes-lista
+   li.catalogo-filmes-lista-item
+   .filme-sinopse
+   .filme-nota {
+   display: flex;
+   justify-content: space-between;
+   color: #ccc;
+   margin: 6px 9px;
+   font-size: 1.5em;
+   font-weight: bold;
+}
+
+section.catalogo
+   .container
+   ul.catalogo-filmes-lista
+   li.catalogo-filmes-lista-item
+   .filme-sinopse
+   .filme-nota
+   span {
+   display: flex;
+   justify-content: space-between;
+   color: #000;
+   margin: 6px 3px;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+footer {
+   display: flex;
+   align-items: center;
+   height: 90px;
+   margin-top: 40px;
+   background-color: #fff;
+}
+
+footer .container .footer-logo {
+   flex: 1;
+   display: flex;
+   justify-content: flex-start;
+   margin: 0;
+   padding: 0;
+}
+
+footer .container .footer-lista {
+   flex: 1;
+   display: flex;
+   justify-content: flex-end;
+}
+
+footer .container .footer-lista .footer-lista--itens {
+   flex: 1;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+footer .container .footer-lista .footer-lista--itens .footer-lista--item a {
+   color: #bababa;
+   font-size: 25px;
+   margin-left: 41px;
+}
